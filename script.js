@@ -23,14 +23,14 @@ for(let i=1;i<=3;i++){
 const startTime = performance.now();
 
 Promise.all(promiseArray).then((res)=>{
-	const totalTimeTaken = (performance.now() - startTime / 1000).toFixed(3);
+	const totalTimeTaken = ((performance.now() - startTime) / 1000).toFixed(3);
 	tbody.innerHTML="";
 
     res.forEach((result) => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
             <td>Promise ${result.prom}</td>
-            <td>${result.num} seconds</td>
+            <td>${result.num}</td>
         `;
         tbody.append(tr);
     });
