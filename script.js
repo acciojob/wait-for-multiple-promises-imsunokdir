@@ -14,13 +14,14 @@ function generatePromise(prom){
 			resolve({prom, num})
 		},num*1000)
 	})
-}
+} 
+const startTime = performance.now();
 const promiseArray = [] 
 for(let i=1;i<=3;i++){
 	promiseArray.push(generatePromise(i));
 }
 
-const startTime = performance.now();
+
 
 Promise.all(promiseArray).then((res)=>{
 	const totalTimeTaken = ((performance.now() - startTime) / 1000).toFixed(3);
