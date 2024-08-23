@@ -1,8 +1,9 @@
 //your JS code here. If required.
 let tbody = document.getElementById("output");
 const row = document.createElement("tr");
+row.id="loading"
 row.innerHTML = `
-<td colspan="2" id="loading">Loading...</td>
+<td colspan="2">Loading...</td>
 `
 tbody.append(row)
 
