@@ -2,7 +2,7 @@
 let tbody = document.getElementById("output");
 const row = document.createElement("tr");
 row.innerHTML = `
-<td colspan="2">Loading...</td>
+<td colspan="2" id="loading">Loading...</td>
 `
 tbody.append(row)
 
