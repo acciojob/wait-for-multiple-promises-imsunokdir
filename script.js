@@ -38,7 +38,8 @@ Promise.all(promiseArray).then((res)=>{
 	total.innerHTML = `
 	<td>Total</td>
 	<td>${totalTimeTaken}</td>
-	`
+	`;
+	tbody.append(total)
 })
 
 
